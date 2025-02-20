@@ -1,0 +1,294 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #deb9d2;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #010101;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #dfdfdf;
+    color: rgb(230, 187, 223);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #ecc9e6;
+    color: rgb(6, 1, 1);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.rating {
+    margin-top: 20px;
+}
+
+#stars {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#stars {
+    font-size: 30px;
+    cursor: pointer;
+    color: gold;
+}
+
+.star {
+    padding: 5px;
+    font-size: 35px;
+}
+
+/* General animation settings */
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply pop animation to h1, h2, and stars */
+h1, h2, #stars {
+    animation: popIn 0.5s ease-out;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Pop Animation */
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1, h2, h3, p, ul {
+    animation: popIn 0.5s ease-out;
+}
+
+/* Layout Styling */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.about, .expertise {
+    width: 45%;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Contact Bar Animation */
+@keyframes moveBar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.contact-bar {
+    background: #f9bcda;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: moveBar 10s linear infinite alternate;
+}
+
+/* Profile Section Styling */
+.profiles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.profile-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease;
+    animation: popIn 0.5s ease-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #ff66b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.profile-card a:hover {
+    background: #ff3385;
+}
+
+/* Rating Page */
+.rating-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.star-rating {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.star {
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.star:hover,
+.star.active {
+    color: gold;
+}
+
+#suggestion-box {
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submit-rating {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submit-rating:hover {
+    background-color: #ff3385;
+}
+
+#confirmation-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}
+
+/* Sparkle effect container */
+#sparkles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Individual sparkles */
+.sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    animation: sparkle-float 1.5s ease-in-out infinite, fade-out 1.5s ease-out forwards;
+}
+
+/* Floating effect */
+@keyframes sparkle-float {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.2); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+/* Fade-out effect */
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Pop-in effect */
+.pop-in {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: pop-in 1s ease-out forwards;
+}
+
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.8); }
+    80% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
